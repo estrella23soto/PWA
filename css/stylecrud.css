@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@300;400;700&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@400;500;600;700&display=swap");
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #cce7ff, #ffcce7, #e0ccff);
+  background-size: cover;
+  color: #333;
+  text-align: center; /* Centrado del texto */
+}
+/* Botones personalizados */
+.custom-button {
+  font-size: 1.5rem; /* Tamaño de texto más grande */
+  padding: 15px 30px; /* Botón más grande */
+  margin: 15px; /* Espaciado entre botones */
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover para los botones */
+.custom-button:hover {
+  transform: scale(1.1); /* Efecto de agrandamiento */
+  opacity: 0.9; /* Ligero oscurecimiento al pasar el mouse */
+}
+
+
+/* Estilos del header */
+.navegador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  background-color: #ff0099; /* Color rosa fucsia */
+  width: 100%;
+}
+
+.navegador__contenido {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.navegador__contenido a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem; /* Tamaño de fuente original */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navegador__contenido a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navegador__contenido .active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Contenido principal */
+#contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.contenido__titulo h1 {
+  font-family: 'Koh Santepheap', sans-serif;
+  font-size: 6rem; /* Tamaño incrementado */
+  font-weight: 700;
+  color: #333;
+}
+
+.contenido__titulo h1 span {
+  color: #ff0099;
+}
+
+.contenido__texto p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem; /* Tamaño incrementado */
+  line-height: 2.2;
+  margin: 30px 0;
+}
+
+.contenido__notificaciones {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#myform {
+  display: flex;
+  flex-direction: column; /* Organización en columna */
+  align-items: center; /* Centrado horizontal */
+  gap: 25px; /* Espaciado aumentado */
+}
+
+#myform input {
+  padding: 20px;
+  font-size: 1.8rem; /* Tamaño incrementado */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.boton {
+  background-color: #ff0099;
+  color: white;
+  padding: 18px 50px; /* Tamaño incrementado */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 700;
+  font-size: 1.8rem; /* Tamaño incrementado */
+}
+
+.boton:hover {
+  background-color: #ff66b3;
+  transform: scale(1.1);
+  padding: 18px 50px;
+}
+
+/* Responsividad */
+@media (max-width: 950px) {
+  .contenido__titulo h1 {
+    font-size: 4.5rem; /* Ajuste para pantallas medianas */
+  }
+
+  .contenido__texto p {
+    font-size: 2rem; /* Ajuste para pantallas medianas */
+  }
+
+  #myform input {
+    width: 90%;
+  }
+
+  .boton {
+    font-size: 1.5rem;
+    padding: 18px 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contenido__titulo h1 {
+    font-size: 3.5rem; /* Ajuste para móviles */
+  }
+
+  .contenido__texto p {
+    font-size: 1.5rem; /* Ajuste para móviles */
+  }
+
+  #myform input {
+    width: 100%;
+  }
+
+  .boton {
+    padding: 18px 50px;
+    font-size: 1.2rem;
+    /* padding: 12px 30px; */
+  }
+}
